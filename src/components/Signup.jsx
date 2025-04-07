@@ -5,7 +5,7 @@
 //   return (
 //     <div className="min-h-screen flex flex-col lg:flex-row bg-gradient-to-r  bg-gray-400 fixed w-full ">
 //       {/* Image Section (Visible on lg and xl screens) */}
-//       <div className="hidden lg:block lg:w-1/2 bg-cover bg-center" style={{ backgroundImage: `url(${home2url})` }}>
+//       <div className="hidden lg:block lg:w-1/2 bg-cover bg-center" style={{ backgroundImage: `url(₹{home2url})` }}>
 //         <div className="h-full flex items-center justify-center bg-black bg-opacity-50">
 //           <h1 className="text-white text-4xl font-bold">Join Us!</h1>
 //         </div>

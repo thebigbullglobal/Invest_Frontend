@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
@@ -97,7 +98,7 @@ const Login = ({ setIsAuthenticated }) => {
       </div>
 
       {/* Right Side - Login Form */}
-      <div className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-8">
+      <div className="w-full lg:w-1/2 flex items-center justify-center p-4 sm:p-8 z-10">
         <div className="bg-white p-6 sm:p-8 rounded-xl shadow-2xl w-full max-w-md transform transition-all duration-300 hover:shadow-xl">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-800">Admin Login</h2>

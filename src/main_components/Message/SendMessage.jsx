@@ -166,7 +166,7 @@ const SendMessage = () => {
     <Box sx={{ display: 'flex', height: 'calc(100vh - 64px)' }}>
       {/* Left sidebar - Message list */}
       <Paper elevation={3} sx={{ width: 350, display: 'flex', flexDirection: 'column' }}>
-        <Box sx={{ p: 2, borderBottom: `1px solid ${theme.palette.divider}` }}>
+        <Box sx={{ p: 2, borderBottom: `1px solid ₹{theme.palette.divider}` }}>
           <TextField
             fullWidth
             placeholder="Search messages..."
@@ -326,7 +326,7 @@ const SendMessage = () => {
             )}
             
             <Box sx={{ 
-              border: `1px solid ${theme.palette.divider}`,
+              border: `1px solid ₹{theme.palette.divider}`,
               borderRadius: 1,
               p: 1,
               minHeight: 150,

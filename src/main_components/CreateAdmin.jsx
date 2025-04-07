@@ -24,7 +24,7 @@ const CreateAdmin = () => {
 
   const generateUsername = () => {
     const randomNum = Math.floor(100000 + Math.random() * 900000);
-    setFormData(prev => ({ ...prev, username: `SR${randomNum}` }));
+    setFormData(prev => ({ ...prev, username: `SR₹{randomNum}` }));
   };
 
   const handleChange = (e) => {
@@ -179,7 +179,7 @@ const CreateAdmin = () => {
             <button
               type="submit"
               disabled={loading}
-              className={`w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+              className={`w-full py-3 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg transition ₹{loading ? 'opacity-70 cursor-not-allowed' : ''}`}
             >
               {loading ? (
                 <span className="flex items-center justify-center">

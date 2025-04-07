@@ -37,7 +37,7 @@ const StatCard = ({ title, value, trend, icon: Icon }) => {
     const trendIcon = trend >= 0 ? '↑' : '↓';
     
     return (
-      <div className="p-4 bg-gradient-to-br from-blue-600 to-blue-400 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+      <div className="p-4 bg-gradient-to-br bg-green-600 text-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
         <div className="flex justify-between items-start">
           <div>
             <span className="text-sm opacity-80">{title}</span>
@@ -47,7 +47,7 @@ const StatCard = ({ title, value, trend, icon: Icon }) => {
             <Icon fontSize="small" />
           </div>
         </div>
-        <div className={`mt-2 text-sm ${trendColor}`}>
+        <div className={`mt-2 text-sm ₹{trendColor}`}>
           {trendIcon} {Math.abs(trend)}% from last week
         </div>
       </div>
@@ -69,14 +69,14 @@ function Overview(props) {
       const stats = [
         { title: 'Total Left Members', value: '1,245', trend: 5.2, icon: PersonIcon },
         { title: 'Total Right Members', value: '1,189', trend: 3.8, icon: PersonIcon },
-        { title: 'Total Left Business', value: '$24,580', trend: 7.1, icon: MoneyIcon },
-        { title: 'Total Right Business', value: '$22,430', trend: 4.3, icon: MoneyIcon },
-        { title: 'C/F Left Business', value: '$3,210', trend: 2.4, icon: MoneyIcon },
-        { title: 'C/F Right Business', value: '$2,980', trend: 1.9, icon: MoneyIcon },
-        { title: 'Direct Income', value: '$1,850', trend: 12.7, icon: MoneyIcon },
-        { title: 'Matching Income', value: '$3,420', trend: 8.5, icon: MoneyIcon },
-        { title: 'Cashback Income', value: '$420', trend: 3.2, icon: MoneyIcon },
-        { title: 'Sponsor Income', value: '$2,150', trend: 9.1, icon: MoneyIcon },
+        { title: 'Total Left Business', value: '₹24,580', trend: 7.1, icon: MoneyIcon },
+        { title: 'Total Right Business', value: '₹22,430', trend: 4.3, icon: MoneyIcon },
+        { title: 'C/F Left Business', value: '₹3,210', trend: 2.4, icon: MoneyIcon },
+        { title: 'C/F Right Business', value: '₹2,980', trend: 1.9, icon: MoneyIcon },
+        { title: 'Direct Income', value: '₹1,850', trend: 12.7, icon: MoneyIcon },
+        { title: 'Matching Income', value: '₹3,420', trend: 8.5, icon: MoneyIcon },
+        { title: 'Cashback Income', value: '₹420', trend: 3.2, icon: MoneyIcon },
+        { title: 'Sponsor Income', value: '₹2,150', trend: 9.1, icon: MoneyIcon },
       ];
     
       // Notifications data
@@ -89,10 +89,10 @@ function Overview(props) {
       // Team members data
       const teamMembers = [1, 2, 3, 4, 5].map(row => ({
         id: row,
-        name: `Member ${row}`,
-        email: `member${row}@example.com`,
+        name: `Member ₹{row}`,
+        email: `member₹{row}@example.com`,
         level: row,
-        business: `$${(row * 500).toLocaleString()}`,
+        business: `₹₹{(row * 500).toLocaleString()}`,
         status: row % 2 === 0 ? 'Active' : 'Pending'
       }));
 
@@ -127,7 +127,7 @@ function Overview(props) {
              </Tooltip>
              
              <div className="flex items-center space-x-2">
-               <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white font-semibold">
+               <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white font-semibold">
                  {(props.username).substring(0,2)}
                </div>
                <span className="hidden md:inline text-sm font-medium">{props.username || 'Loading...'}</span>
@@ -139,7 +139,7 @@ function Overview(props) {
       
        <main className="flex-1 overflow-y-auto p-4 md:p-6 bg-gray-50">
         
-         <Box className="bg-gradient-to-r from-blue-600 to-blue-400 rounded-xl shadow-lg p-6 mb-6 text-white">
+         <Box className="bg-gradient-to-r rounded-xl shadow-lg p-6   bg-green-700 mb-6 text-white">
            <div className="flex flex-col md:flex-row md:items-center md:justify-between">
              <div>
                <h2 className="text-2xl font-bold mb-2">Welcome back, John!</h2>
@@ -164,11 +164,11 @@ function Overview(props) {
            <div className="space-y-4">
              {notifications.map(item => (
                <div key={item.id} className="flex items-start">
-                 <div className="bg-blue-100 p-2 rounded-full mr-3">
-                   <NotificationsIcon className="text-blue-600" fontSize="small" />
+                 <div className="bg-green-100 p-2 rounded-full mr-3">
+                   <NotificationsIcon className="text-green-600" fontSize="small" />
                  </div>
                  <div>
-                   <p className="text-sm font-medium text-gray-800">{item.title}</p>
+                   <p className="text-sm font-medium text-green-800">{item.title}</p>
                    <p className="text-xs text-gray-500 mt-1">{item.time}</p>
                  </div>
                </div>
@@ -200,7 +200,7 @@ function Overview(props) {
                    <TableCell>{member.level}</TableCell>
                    <TableCell>{member.business}</TableCell>
                    <TableCell>
-                     <span className={`px-2 py-1 rounded-full text-xs ${
+                     <span className={`px-2 py-1 rounded-full text-xs ₹{
                        member.status === 'Active' 
                          ? 'bg-green-100 text-green-800' 
                          : 'bg-yellow-100 text-yellow-800'

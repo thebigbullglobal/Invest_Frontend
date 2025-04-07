@@ -116,15 +116,15 @@ const MyIncomeReport = () => {
       return [
         item.sn,
         item.period,
-        `$${item.directIncome.toLocaleString()}`,
-        `$${item.matchingIncome.toLocaleString()}`,
-        `$${item.cashbackIncome.toLocaleString()}`,
-        `$${item.sponsorIncome.toLocaleString()}`,
-        `$${totalIncome.toLocaleString()}`,
-        `$${item.tds.toLocaleString()}`,
-        `$${item.processCharge.toLocaleString()}`,
-        `$${item.loanDeduction.toLocaleString()}`,
-        `$${payableAmount.toLocaleString()}`,
+        `₹₹{item.directIncome.toLocaleString()}`,
+        `₹₹{item.matchingIncome.toLocaleString()}`,
+        `₹₹{item.cashbackIncome.toLocaleString()}`,
+        `₹₹{item.sponsorIncome.toLocaleString()}`,
+        `₹₹{totalIncome.toLocaleString()}`,
+        `₹₹{item.tds.toLocaleString()}`,
+        `₹₹{item.processCharge.toLocaleString()}`,
+        `₹₹{item.loanDeduction.toLocaleString()}`,
+        `₹₹{payableAmount.toLocaleString()}`,
         item.paidStatus,
         item.paymentDate || 'N/A'
       ];
@@ -260,16 +260,16 @@ const MyIncomeReport = () => {
                   <TableRow key={row.sn}>
                     <TableCell>{row.sn}</TableCell>
                     <TableCell>{row.period}</TableCell>
-                    <TableCell>${row.directIncome.toLocaleString()}</TableCell>
-                    <TableCell>${row.matchingIncome.toLocaleString()}</TableCell>
-                    <TableCell>${row.cashbackIncome.toLocaleString()}</TableCell>
-                    <TableCell>${row.sponsorIncome.toLocaleString()}</TableCell>
-                    <TableCell sx={{ fontWeight: 'bold' }}>${totalIncome.toLocaleString()}</TableCell>
-                    <TableCell>${row.tds.toLocaleString()}</TableCell>
-                    <TableCell>${row.processCharge.toLocaleString()}</TableCell>
-                    <TableCell>${row.loanDeduction.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.directIncome.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.matchingIncome.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.cashbackIncome.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.sponsorIncome.toLocaleString()}</TableCell>
+                    <TableCell sx={{ fontWeight: 'bold' }}>₹{totalIncome.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.tds.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.processCharge.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.loanDeduction.toLocaleString()}</TableCell>
                     <TableCell sx={{ fontWeight: 'bold', color: theme.palette.success.main }}>
-                      ${payableAmount.toLocaleString()}
+                      ₹{payableAmount.toLocaleString()}
                     </TableCell>
                     <TableCell sx={{ 
                       color: row.paidStatus === 'Paid' ? theme.palette.success.main : theme.palette.warning.main,
@@ -283,18 +283,18 @@ const MyIncomeReport = () => {
               })}
               <TableRow sx={{ bgcolor: theme.palette.grey[100] }}>
                 <TableCell colSpan={2} sx={{ fontWeight: 'bold' }}>Total</TableCell>
-                <TableCell sx={{ fontWeight: 'bold' }}>${totals.directIncome.toLocaleString()}</TableCell>
-                <TableCell sx={{ fontWeight: 'bold' }}>${totals.matchingIncome.toLocaleString()}</TableCell>
-                <TableCell sx={{ fontWeight: 'bold' }}>${totals.cashbackIncome.toLocaleString()}</TableCell>
-                <TableCell sx={{ fontWeight: 'bold' }}>${totals.sponsorIncome.toLocaleString()}</TableCell>
+                <TableCell sx={{ fontWeight: 'bold' }}>₹{totals.directIncome.toLocaleString()}</TableCell>
+                <TableCell sx={{ fontWeight: 'bold' }}>₹{totals.matchingIncome.toLocaleString()}</TableCell>
+                <TableCell sx={{ fontWeight: 'bold' }}>₹{totals.cashbackIncome.toLocaleString()}</TableCell>
+                <TableCell sx={{ fontWeight: 'bold' }}>₹{totals.sponsorIncome.toLocaleString()}</TableCell>
                 <TableCell sx={{ fontWeight: 'bold' }}>
-                  ${(totals.directIncome + totals.matchingIncome + totals.cashbackIncome + totals.sponsorIncome).toLocaleString()}
+                  ₹{(totals.directIncome + totals.matchingIncome + totals.cashbackIncome + totals.sponsorIncome).toLocaleString()}
                 </TableCell>
-                <TableCell sx={{ fontWeight: 'bold' }}>${totals.tds.toLocaleString()}</TableCell>
-                <TableCell sx={{ fontWeight: 'bold' }}>${totals.processCharge.toLocaleString()}</TableCell>
-                <TableCell sx={{ fontWeight: 'bold' }}>${totals.loanDeduction.toLocaleString()}</TableCell>
+                <TableCell sx={{ fontWeight: 'bold' }}>₹{totals.tds.toLocaleString()}</TableCell>
+                <TableCell sx={{ fontWeight: 'bold' }}>₹{totals.processCharge.toLocaleString()}</TableCell>
+                <TableCell sx={{ fontWeight: 'bold' }}>₹{totals.loanDeduction.toLocaleString()}</TableCell>
                 <TableCell sx={{ fontWeight: 'bold', color: theme.palette.success.main }}>
-                  ${(
+                  ₹{(
                     totals.directIncome + 
                     totals.matchingIncome + 
                     totals.cashbackIncome + 

@@ -65,10 +65,12 @@ const Footer = () => {
         {/* Copyright Section */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-sm text-gray-400">
-            Copyright © 2023 Dr Realtor. All rights reserved.
+            Copyright © 2025 Big Bull Real Estate , All rights reserved.
           </p>
         </div>
+       
       </div>
+     
     </footer>
   );
 };

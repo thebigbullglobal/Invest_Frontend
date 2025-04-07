@@ -38,7 +38,7 @@
 //       await new Promise(resolve => setTimeout(resolve, 800));
       
 //       // This would be your actual API call in production
-//       // const response = await fetch(`/api/genealogy?userId=${userId}`);
+//       // const response = await fetch(`/api/genealogy?userId=₹{userId}`);
 //       // const data = await response.json();
       
 //       // Mock response based on your data
@@ -130,7 +130,7 @@
 //           p: 1,
 //           bgcolor: isRoot ? theme.palette.primary.light : theme.palette.grey[100],
 //           borderRadius: 2,
-//           border: `1px solid ${theme.palette.grey[300]}`,
+//           border: `1px solid ₹{theme.palette.grey[300]}`,
 //           '&:hover': {
 //             boxShadow: theme.shadows[1]
 //           }
@@ -185,7 +185,7 @@
 //             <Box sx={{ 
 //               position: 'relative',
 //               pl: 4,
-//               borderLeft: `2px dashed ${theme.palette.grey[300]}`,
+//               borderLeft: `2px dashed ₹{theme.palette.grey[300]}`,
 //               ml: 2
 //             }}>
 //               {node.children.map(child => renderTreeNode(child, level + 1))}
@@ -283,7 +283,7 @@
 //               p: 2,
 //               bgcolor: theme.palette.grey[100],
 //               borderRadius: 2,
-//               border: `2px solid ${theme.palette.primary.main}`
+//               border: `2px solid ₹{theme.palette.primary.main}`
 //             }}>
 //               <Avatar sx={{ 
 //                 width: 48, 
@@ -434,7 +434,7 @@
 //           p: 1.5,
 //           bgcolor: isRoot ? theme.palette.primary.light : theme.palette.grey[100],
 //           borderRadius: 2,
-//           border: `1px solid ${isRoot ? theme.palette.primary.main : theme.palette.grey[300]}`,
+//           border: `1px solid ₹{isRoot ? theme.palette.primary.main : theme.palette.grey[300]}`,
 //           boxShadow: theme.shadows[1],
 //           width: 'fit-content',
 //           minWidth: 200
@@ -480,7 +480,7 @@
 //           <Box sx={{ 
 //             position: 'relative',
 //             pl: 4,
-//             borderLeft: `2px dashed ${theme.palette.grey[300]}`,
+//             borderLeft: `2px dashed ₹{theme.palette.grey[300]}`,
 //             ml: 2
 //           }}>
 //             {node.children.map(child => renderNode(child, level + 1))}
@@ -668,7 +668,7 @@
 //       p: 1.5,
 //       bgcolor: isRoot ? theme.palette.primary.light : theme.palette.grey[100],
 //       borderRadius: 2,
-//       border: `1px solid ${isRoot ? theme.palette.primary.main : theme.palette.grey[300]}`,
+//       border: `1px solid ₹{isRoot ? theme.palette.primary.main : theme.palette.grey[300]}`,
 //       boxShadow: theme.shadows[1],
 //       width: 'fit-content',
 //       minWidth: 200,
@@ -708,7 +708,7 @@
 
 //       <Box>
 //         <Typography variant="subtitle2" sx={{ fontWeight: 'bold' }}>
-//           {node[displayKey] || `Node ${node[idKey]}`}
+//           {node[displayKey] || `Node ₹{node[idKey]}`}
 //         </Typography>
 //         <Typography variant="caption" color="textSecondary">
 //           ID: {node[idKey]}
@@ -754,7 +754,7 @@
 //           <Box sx={{ 
 //             position: 'relative',
 //             pl: 4,
-//             borderLeft: `2px dashed ${theme.palette.grey[300]}`,
+//             borderLeft: `2px dashed ₹{theme.palette.grey[300]}`,
 //             ml: 2
 //           }}>
 //             {node.children.map(child => renderNode(child, level + 1))}
@@ -1022,7 +1022,7 @@ const GenericTree = ({
       p: 1.5,
       bgcolor: isRoot ? theme.palette.primary.light : theme.palette.grey[100],
       borderRadius: 2,
-      border: `1px solid ${isRoot ? theme.palette.primary.main : theme.palette.grey[300]}`,
+      border: `1px solid ₹{isRoot ? theme.palette.primary.main : theme.palette.grey[300]}`,
       boxShadow: theme.shadows[1],
       width: 'fit-content',
       minWidth: 200,
@@ -1062,7 +1062,7 @@ const GenericTree = ({
 
       <Box>
         <Typography variant="subtitle2" sx={{ fontWeight: 'bold' }}>
-          {node[displayKey] || `Node ${node[idKey]}`}
+          {node[displayKey] || `Node ₹{node[idKey]}`}
         </Typography>
         <Typography variant="caption" color="textSecondary">
           ID: {node[idKey]}
@@ -1108,7 +1108,7 @@ const GenericTree = ({
           <Box sx={{ 
             position: 'relative',
             pl: 4,
-            borderLeft: `2px dashed ${theme.palette.grey[300]}`,
+            borderLeft: `2px dashed ₹{theme.palette.grey[300]}`,
             ml: 2
           }}>
             {node.children.map(child => renderNode(child, level + 1))}

@@ -16,7 +16,7 @@ import CreateParent from './Pages/CreateParent';
 
 function Header({ setIsAuthenticated }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activestate, setactiveState] = useState('Home');
+  const [activestate, setactiveState] = useState('home');
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -30,11 +30,11 @@ function Header({ setIsAuthenticated }) {
     <div className='relative'>
       {/* Social Media Bar */}
       <div className='fixed top-0 z-40 w-full'>
-        <div className='h-8 md:h-10 bg-orange-500 flex justify-end items-center text-black'>
+        <div className='h-8 md:h-10 bg-green-800 flex justify-end items-center text-black'>
           <ul className="flex space-x-3 md:space-x-4 pr-4 md:pr-14 text-blue-500">
             <li>
               <Link to='/' target="_blank" rel="noopener noreferrer">
-                <FaFacebook className="text-sm md:text-base" />
+              <FaFacebook className="text-sm md:text-base"  />
               </Link>
             </li>
             <li>
@@ -42,26 +42,18 @@ function Header({ setIsAuthenticated }) {
                 <FaInstagram className="text-sm md:text-base" />
               </Link>
             </li>
-            <li>
-              <Link to='/' target="_blank" rel="noopener noreferrer">
-                <FaLinkedin className="text-sm md:text-base" />
-              </Link>
-            </li>
-            <li>
-              <Link to='/' target="_blank" rel="noopener noreferrer">
-                <FaTwitter className="text-sm md:text-base" />
-              </Link>
-            </li>
+           
           </ul>
         </div>
 
         {/* Navbar */}
-        <nav className="bg-blue-800  md:p-4">
-          <div className="container mx-auto flex justify-between items-center">
+        <nav className="bg-white  md:p-4 shadow-lg">
+          <div className="container mx-auto flex justify-between items-center py-2 px-2">
             {/* Logo */}
-            <div className="bg-white rounded-full flex items-center justify-center w-[80px] h-[80px] ">
-  <img src={Logo} className="w-[80px] h-[80px] object-contain" alt="Logo" />
-</div>
+           
+            <div className="bg-white rounded-full  flex items-center justify-center w-[48px] h-[48px] ">
+  <img src={Logo} className="w-[48px] h-[48px] md:w-[100px] md:h-[60px]" alt="Logo" />
+</div>  
 
 
             {/* Toggle Button for Mobile */}
@@ -88,48 +80,48 @@ function Header({ setIsAuthenticated }) {
 
             {/* Nav Items */}
             <div
-              className={`${isMenuOpen ? 'block' : 'hidden'} lg:flex lg:items-center w-full lg:w-auto absolute lg:static top-full left-0 bg-blue-600 lg:bg-transparent z-30`}
+              className={`₹{isMenuOpen ? 'block' : 'hidden'} lg:flex lg:items-center w-full lg:w-auto absolute lg:static top-full left-0 bg-blue-600 lg:bg-transparent z-50`}
             >
               <ul className="flex flex-col lg:flex-row lg:space-x-6 space-y-2 lg:space-y-0 p-4 lg:p-0">
                 <li>
                   <button onClick={() => { setactiveState('home'); setIsMenuOpen(false); }} 
-                    className={`text-white transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ${activestate === 'home' ? 'text-green-400' : ''}`}>
+                    className={`text-black transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ₹{activestate === 'home' ? 'text-green-400' : ''}`}>
                     Home
                   </button>
                 </li>
                 <li>
                   <button onClick={() => { setactiveState("about-us"); setIsMenuOpen(false); }} 
-                    className={`text-white transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ${activestate === 'about-us' ? 'text-green-400' : ''}`}>
+                    className={`text-black transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ₹{activestate === 'about-us' ? 'text-green-400' : ''}`}>
                     About Us
                   </button>
                 </li>
                 <li>
                   <button onClick={() => { setactiveState('projects'); setIsMenuOpen(false); }} 
-                    className={`text-white transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ${activestate === 'projects' ? 'text-green-400' : ''}`}>
+                    className={`text-black transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ₹{activestate === 'projects' ? 'text-green-400' : ''}`}>
                     Projects
                   </button>
                 </li>
                 <li>
                   <button onClick={() => { setactiveState('features'); setIsMenuOpen(false); }} 
-                    className={`text-white transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ${activestate === 'features' ? 'text-green-400' : ''}`}>
+                    className={`text-black transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ₹{activestate === 'features' ? 'text-green-400' : ''}`}>
                     Features
                   </button>
                 </li>
                 <li>
                   <button onClick={() => { setactiveState('gallery'); setIsMenuOpen(false); }} 
-                    className={`text-white transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ${activestate === 'gallery' ? 'text-green-400' : ''}`}>
+                    className={`text-black transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ₹{activestate === 'gallery' ? 'text-green-400' : ''}`}>
                     Gallery
                   </button>
                 </li>
                 <li>
                   <button onClick={() => { setactiveState('career'); setIsMenuOpen(false); }} 
-                    className={`text-white transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ${activestate === 'career' ? 'text-green-400' : ''}`}>
+                    className={`text-black transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ₹{activestate === 'career' ? 'text-green-400' : ''}`}>
                     Career
                   </button>
                 </li>
                 <li>
                   <button onClick={() => { setactiveState('contact'); setIsMenuOpen(false); }} 
-                    className={`text-white transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ${activestate === 'contact' ? 'text-green-400' : ''}`}>
+                    className={`text-black transition duration-300 ease-in-out transform hover:text-green-400 hover:scale-105 ₹{activestate === 'contact' ? 'text-green-400' : ''}`}>
                     Contact Us
                   </button>
                 </li>
@@ -140,13 +132,13 @@ function Header({ setIsAuthenticated }) {
                 </li>
                 <li className="pt-2 lg:pt-0">
                   <button onClick={() => { setactiveState('register'); setIsMenuOpen(false); }} 
-                    className='py-1 bg-orange-500 px-2 rounded-md hover:bg-red-500 transition-all duration-150 ease-in-out hover:scale-105 w-full lg:w-auto'>
+                    className='py-1 bg-green-700 text-white px-2 rounded-md hover:bg-red-500 transition-all duration-150 ease-in-out hover:scale-105 w-full lg:w-auto'>
                     Register
                   </button>
                 </li>
                 <li className="pt-2 lg:pt-0">
                   <button onClick={() => { setactiveState('login'); setIsMenuOpen(false); }} 
-                    className='py-1 bg-orange-500 px-2 rounded-md transition-all duration-150 ease-in-out hover:scale-105 hover:bg-red-500 w-full lg:w-auto'>
+                    className='py-1 bg-green-700 text-white px-2 rounded-md transition-all duration-150 ease-in-out hover:scale-105 hover:bg-red-500 w-full lg:w-auto'>
                     Login
                   </button>
                 </li>
@@ -157,8 +149,10 @@ function Header({ setIsAuthenticated }) {
       </div>
 
       {/* Content Area */}
-      <div className='mt-32 md:mt-36 px-2 md:px-0'>
+      <div className='mt-32 md:mt-36 px-2 md:px-0 z-50'>
         {activestate === 'home' && <Home />}
+
+
         {activestate === 'about-us' && <Aboutus setactiveState={setactiveState} />}
         {activestate === 'login' && <Login setIsAuthenticated={setIsAuthenticated} setactiveState={setactiveState} />}
         {activestate === 'register' && <Signup setactiveState={setactiveState} />}
