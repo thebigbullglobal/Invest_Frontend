@@ -30,6 +30,7 @@ import MyIncomeReport from './Income/MyIncomeReport';
 import RewardReport from './Income/RewardReport'
 import SendMessage from './Message/SendMessage';
 import MessageInbox from './Message/MessageInbox';
+import Dashboardheader from './Profile/Dashboardheader';
 
 import axios from 'axios'
 // Sidebar Component
@@ -55,15 +56,15 @@ const SidebarItem = ({ title, icon: Icon, onClick, children }) => {
           className={`cursor-pointer p-3 flex items-center justify-between
             bg-gradient-to-r from-green-600  text-white 
             font-semibold rounded-xl shadow-lg transition-all duration-300
-            ₹{isHovered ? "scale-105 shadow-xl" : ""}
-            ₹{open ? "rounded-b-none" : ""}`}
+            ${isHovered ? "scale-105 shadow-xl" : ""}
+            ${open ? "rounded-b-none" : ""}`}
         >
           <div className="flex items-center">
             <Icon className="mr-2" />
             <span>{title}</span>
           </div>
           <ChevronRight
-            className={`transition-transform duration-300 ₹{
+            className={`transition-transform duration-300 ${
               open ? "rotate-90" : ""
             }`}
           />
@@ -122,31 +123,28 @@ export default function Dashboard() {
 
 
          
-
   const fetchUserData = async () => {
     try {
-        const response = await axios.get('http://localhost:8000/users/getUserData', {
-            headers: {
-                Authorization: `Bearer ₹{token}`
-            }
-        });
-        console.log(response.data);
-
-        
-        setUserName(response.data.username); // Adjust based on your API response structure
+      const response = await axios.get('http://localhost:8000/users/getUserData', {
+        headers: {
+          Authorization: `Bearer ${token}`  // ✅ Correct template literal
+        }
+      });
+  
+      console.log(response.data);
+      setUserName(response.data.username); // ✅ Adjust if the actual field is different
     } catch (error) {
-        console.error('Error fetching user data:', error);
-        // Maybe set an error state here
+      console.error('Error fetching user data:', error);
+      // Optional: set error state for UI feedback
     }
-};
-   
-               
-              useEffect(()=>{
-               
-                  if(token){
-                    fetchUserData();
-                  }
-              },[])
+  };
+  
+  useEffect(() => {
+    if (token) {
+      fetchUserData();
+    }
+  }, [token]); // ✅ Added `token` as dependency in case it updates
+  
 
 
 
@@ -162,6 +160,7 @@ export default function Dashboard() {
 
   // Logout Function
   const handleLogout = () => {
+    console.log("CAll to logout");
     localStorage.removeItem('token'); // Example: Remove token
     navigate('/')
     setCurrentActive('logout');
@@ -169,24 +168,35 @@ export default function Dashboard() {
 
   return (
     <div className="flex h-screen bg-gray-50 overflow-hidden">
+
       {/* Mobile sidebar toggle button */}
       <button 
-        className="md:hidden fixed top-4 left-4 z-50 bg-green-600 text-white p-2 rounded-lg shadow-lg"
+        className="md:hidden fixed top-4 left-6 z-50 bg-green-600 text-white p-2 rounded-lg shadow-lg"
         onClick={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)}
       >
-        <Menu />
+         <Menu className=''/> 
       </button>
+
+      
 
       {/* Sidebar */}
       <div className={`
         fixed md:relative z-40 w-64 h-full bg-gradient-to-b from-green-800 to-green-700 p-4 text-white
         transform transition-all duration-300 ease-in-out
-        ₹{isMobileSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
+        ${isMobileSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
       `}>
         <div className="flex items-center justify-between mb-8 pt-2">
           <h1 className="text-2xl font-bold flex items-center">
-            <DashboardIcon className="mr-2 text-sm" />
-           <span className='text-lg'>  Big Bull Dashboard</span>
+            
+          <div className=" items-center">
+    <span className='hidden md:block mb-2'> <DashboardIcon className=" mr-2 w-8 h-8 mb-1" /></span>
+   
+    
+ 
+</div>
+
+
+           
           </h1>
         </div>
 
@@ -247,9 +257,20 @@ export default function Dashboard() {
         </div>
       </div>
 
+
+
+
+
+
+
+
       {/* Main Content */}
       <div className="flex-1  overflow-auto">
-        {currentActive === 'Overview' && <Overview username = {username}/>}
+        {<Dashboardheader username={username}/>}
+
+        <div className=' mt-16    '>
+
+        {currentActive === 'Overview' && <Overview/>}
         {currentActive === 'view' && <div><ProfileView/></div>}
         {currentActive === 'kyc' && <div><BankDetailsKyc/></div>}
         {currentActive === 'tree' && <div><GenealogyTree/></div>}
@@ -260,7 +281,16 @@ export default function Dashboard() {
         {currentActive === 'viewmessage' && <div><MessageInbox/></div>}
         {currentActive === 'helpcenter' && <div>Help Center</div>}
         {currentActive === 'logout' && <div>Logging out...</div>}
+
+
+        </div>
+        
       </div>
     </div>
+
+
+
+
+
   );
 }

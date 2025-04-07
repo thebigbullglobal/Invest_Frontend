@@ -30,6 +30,7 @@ import {
   BarChart,
   PieChart
 } from '@mui/icons-material';
+import Dashboardheader from './Profile/Dashboardheader';
 
 
 const StatCard = ({ title, value, trend, icon: Icon }) => {
@@ -105,36 +106,17 @@ function Overview(props) {
 
       <div className='w-full'>
               <div className="w-full">
+
+
+
+
+         
        
-       <header className="bg-white shadow-sm z-30">
-         <div className="flex items-center justify-between px-6 py-3">
-           <h2 className="text-xl font-semibold text-gray-800">Dashboard Overview</h2>
-           
-           <div className="flex items-center space-x-4">
-             <Tooltip title="Search">
-               <IconButton>
-                 <SearchIcon className="text-gray-500" />
-               </IconButton>
-             </Tooltip>
-             
-             <Tooltip title="Notifications">
-               <IconButton onClick={() => setShowNotifications(!showNotifications)}>
-                 <div className="relative">
-                   <NotificationsIcon className="text-gray-500" />
-                   <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full"></span>
-                 </div>
-               </IconButton>
-             </Tooltip>
-             
-             <div className="flex items-center space-x-2">
-               <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center text-white font-semibold">
-                 {(props.username).substring(0,2)}
-               </div>
-               <span className="hidden md:inline text-sm font-medium">{props.username || 'Loading...'}</span>
-             </div>
-           </div>
-         </div>
-       </header>
+    
+
+
+
+
 
       
        <main className="flex-1 overflow-y-auto p-4 md:p-6 bg-gray-50">
@@ -142,7 +124,7 @@ function Overview(props) {
          <Box className="bg-gradient-to-r rounded-xl shadow-lg p-6   bg-green-700 mb-6 text-white">
            <div className="flex flex-col md:flex-row md:items-center md:justify-between">
              <div>
-               <h2 className="text-2xl font-bold mb-2">Welcome back, John!</h2>
+               <h2 className="text-2xl font-bold mb-2">Welcome back, </h2>
                <p className="opacity-90">Here's what's happening with your business today.</p>
              </div>
              <button className="mt-4 md:mt-0 px-6 py-2 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-lg font-medium transition-colors duration-200">
