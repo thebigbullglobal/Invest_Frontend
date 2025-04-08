@@ -125,7 +125,7 @@ export default function Dashboard() {
          
   const fetchUserData = async () => {
     try {
-      const response = await axios.get('http://localhost:8000/users/getUserData', {
+      const response = await axios.get('https://invest-backend-1.onrender.com/users/getUserData', {
         headers: {
           Authorization: `Bearer ${token}`  // ✅ Correct template literal
         }
