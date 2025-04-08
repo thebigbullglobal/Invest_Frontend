@@ -147,4 +147,6 @@ const CreateAdmin = () => {
   );
 };
 
+
+//update code of create admin page
 export default CreateAdmin;
