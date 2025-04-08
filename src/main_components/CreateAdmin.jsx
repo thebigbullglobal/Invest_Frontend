@@ -34,7 +34,7 @@ const CreateAdmin = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:8000/users/createtree/v2', {
+      const response = await axios.post('https://invest-backend-1.onrender.com/users/createtree/v2', {
         parent_username: formData.parent_username,
         username: formData.username,
         password: formData.password,
