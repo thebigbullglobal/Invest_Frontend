@@ -705,7 +705,7 @@ const GenealogyTree = () => {
     const token = localStorage.getItem('token');
     const fetchTreeData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/users/getuser', {
+        const response = await axios.get('https://invest-backend-1.onrender.com//users/getuser', {
           headers: {
             'Authorization': `Bearer ${token}`,  
             'Content-Type': 'application/json'
