@@ -210,7 +210,7 @@ const Home = () => {
 
               <div className="text-gray-700">
                 <p className="mb-4">
-                  <strong>Welcome To Big Bull Real Estate,</strong> your premier destination for all your plot needs in Patna, Blhta, and the
+                  <strong>Welcome To Big Bull Real Estate,</strong> your premier destination for all your plot needs in Dehradun, and the
                   surrounding areas. Big Bull is dedicated to delivering exceptional service, professionalism,
                   and integrity in every aspect of our operations.
                 </p>
@@ -219,8 +219,8 @@ const Home = () => {
                   <>
                     <p className="mb-4">
                       We are committed to being your trusted partner in plot sales, providing the knowledge, expertise, 
-                      and personalized attention you need to achieve your real estate goals in Patna, Blhta, and the 
-                      wider Bihar region.
+                      and personalized attention you need to achieve your real estate goals in Dehradun Uttarakhand, and the 
+                      wider Uttarakhand region.
                     </p>
                     <p>
                       At Dr Realtor, we understand that buying or selling a plot is a significant decision, both
