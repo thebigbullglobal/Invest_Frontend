@@ -109,14 +109,14 @@ const Home = () => {
       id: 2,
       name: "Robert Kim",
       role: "Investor",
-      quote: "As an out-of-state investor, I needed a realtor I could trust. Dr Realtor exceeded all expectations with their market expertise and attention to detail.",
+      quote: "As an out-of-state investor, I needed a realtor I could trust. the big bull exceeded all expectations with their market expertise and attention to detail.",
       image: "testimonial2.jpg"
     },
     {
       id: 3,
       name: "Lisa Rodriguez",
       role: "Seller",
-      quote: "Our home sold for 15% above asking price in just 9 days. The marketing strategy and negotiation skills of Dr Realtor are unmatched.",
+      quote: "Our home sold for 15% above asking price in just 9 days. The marketing strategy and negotiation skills of the big bull are unmatched.",
       image: "testimonial3.jpg"
     }
   ];
@@ -223,7 +223,7 @@ const Home = () => {
                       wider Uttarakhand region.
                     </p>
                     <p>
-                      At Dr Realtor, we understand that buying or selling a plot is a significant decision, both
+                      At big bull, we understand that buying or selling a plot is a significant decision, both
                       financially and emotionally. That's why we have assembled a team of dedicated professionals
                       who possess an in-depth understanding of the local market dynamics, trends, and regulations.
                       With our expertise and personalized approach, we aim to make your plot sale experience
