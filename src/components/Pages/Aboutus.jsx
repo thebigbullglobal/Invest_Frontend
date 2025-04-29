@@ -87,9 +87,7 @@ function Aboutus({setactiveState}) {
 
       <h2 className="text-2xl font-semibold text-blue-700 mt-6">Location Of the big bull Properties</h2>
       <p className="text-gray-700 text-sm sm:text-md leading-relaxed space-y-3 sm:space-y-4">
-        With a focus on Patna, Bihta, and nearby areas, we have developed an extensive network and comprehensive knowledge of the local real estate landscape.
-        We stay up-to-date with the latest developments, infrastructure projects, and investment opportunities in these regions.
-        Whether you are looking for residential, commercial, or agricultural plots, our team is well-equipped to assist you in finding the perfect property that aligns with your requirements and investment goals.
+         Office H.O dehradun 
       </p>
 
       <h2 className="text-2xl font-semibold text-blue-700 mt-6">Transparency</h2>
@@ -123,7 +121,7 @@ function Aboutus({setactiveState}) {
       <h2 className="text-2xl font-semibold text-blue-700 mt-6 sm:text-md leading-relaxed space-y-3 sm:space-y-4">Support</h2>
       <p className="text-gray-700 text-sm sm:text-md leading-relaxed space-y-3 sm:space-y-4">
         Thank you for considering the big bull for your plot needs. Contact us today to experience our exceptional services, personalized approach,
-        and expertise in Patna, Bihta, and the surrounding areas. Let us be your trusted partner in achieving your real estate goals and turning your plot ownership dreams into reality.
+        and expertise in Dehradun, and the surrounding areas. Let us be your trusted partner in achieving your real estate goals and turning your plot ownership dreams into reality.
       </p>
 
       <h2 className="text-2xl font-semibold text-blue-700 mt-6  sm:text-md leading-relaxed space-y-3 sm:space-y-4">About the big bull</h2>

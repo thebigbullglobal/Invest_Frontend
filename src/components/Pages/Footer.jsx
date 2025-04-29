@@ -44,14 +44,15 @@ const Footer = () => {
             <h2 className="text-xl font-bold">Contact Info</h2>
             <div className="space-y-2">
               <p className="text-sm text-gray-400">
-                <span className="font-semibold">Corporate &</span> Office H.O dehradun
+                <span className="font-semibold">Corporate &</span> Office H.O Dehradun
               </p>
               {/* <p className="text-sm text-gray-400">
                 <span className="font-semibold">Zonal Office:</span> 3rd Floor, Kamla Complex Near DMV, Saguna More, Bailey Road Patna - 801933
               </p>
+              */}
               <p className="text-sm text-gray-400">
-                <span className="font-semibold">Branch Office:</span> 2nd Floor, Chandra Tower, Chowk, Sevila Kalan, Majra, Dehradun, Uttarakhand 248171
-              </p> */}
+                <span className="font-semibold">Branch Office:</span> Reshikesh
+              </p> 
               <p className="text-sm text-gray-400">
                 <span className="font-semibold">Phone:</span> +919557115217
               </p>

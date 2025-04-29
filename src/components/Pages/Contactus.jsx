@@ -44,10 +44,10 @@ function Contactus(){
     
       <div className="bg-white rounded-lg shadow-md   px-4  sm:py-3 sm:px-3 mb-4 transition-all duration-200 ease-in-out hover:scale-105 cursor-pointer">
         <h2 className="text-xl  sm:text-md md:text-lg font-bold text-blue-700 ">
-          Corporate & H.O
+          Corporate & H.O Dehradun
         </h2>
         <p className="text-gray-700 text-sm  mb-4">
-          2nd Floor, E 29, Sector-3, Noida, 201301 (UP)
+             Branch office Rishikesh
         </p>
         <p className="text-gray-700  mb-4">
           Need Assistance? Please Complete The Contact Form
@@ -61,12 +61,12 @@ function Contactus(){
           <h3 className="text-sm sm:text-md md:text-lg font-semibold text-blue-700 mb-4">
             Zonal Office
           </h3>
-          <p className="text-gray-700 text-sm  md:text-md mb-4">
+          {/* <p className="text-gray-700 text-sm  md:text-md mb-4">
             3rd Floor, Kamla Complex
           </p>
           <p className="text-gray-700 text-sm md:text-md mb-4">
             Near DAY, Saguna More, Bailey Road Patna - 801503
-          </p>
+          </p> */}
         </div>
 
         {/* Branch Office */}
@@ -75,8 +75,7 @@ function Contactus(){
             Branch Office
           </h3>
           <p className="text-gray-700 text-sm  mb-4">
-            2nd Floor, Chandra Tower, Chowk, Sewia Kalan, Majra, Dehradun,
-            Uttarakhand - 248171
+              Rishikesh
           </p>
         </div>
       </div>
@@ -166,7 +165,7 @@ function Contactus(){
                 href="mailto:info@dmealror.in"
                 className="text-blue-700 hover:underline"
               >
-                info@dmealror.in
+                thebigbulllobal@gmail.com
               </a>
             </p>
             <p className="text-gray-700 text-sm sm:text-md md:text-lg mb-4">
@@ -175,7 +174,7 @@ function Contactus(){
                  to='/'
                 className="text-blue-700 hover:underline"
               >
-                +91-8347912409
+                +91-9557115217
               </Link>
             </p>
             <div className='space-x-3 flex'>
