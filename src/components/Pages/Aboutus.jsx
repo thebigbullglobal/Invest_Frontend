@@ -45,11 +45,12 @@ function Aboutus({setactiveState}) {
             </h1>
 
             <div className="text-gray-700 text-sm sm:text-md leading-relaxed space-y-3 sm:space-y-4">
+            <p>
+  Welcome to <span className="font-semibold text-blue-600">The Big Bull</span>, located in Uttarakhand and its surrounding areas. As a trusted and experienced real estate marketing and sales team, we specialize in connecting buyers and sellers in the ever-growing real estate market.
+</p>
+
               <p>
-                Welcome to <span className="font-semibold text-blue-600">Dr Realtor</span>, your premier destination for all your plot needs in Patna, Bihta, and the surrounding areas. As a trusted and experienced real estate marketing and sales team, we specialize in connecting buyers and sellers in the ever-growing real estate market.
-              </p>
-              <p>
-                At <span className="font-semibold text-blue-600">Dr Realtor</span>, we understand that buying or selling a plot is a significant decision, both financially and emotionally. That's why we have assembled a team of dedicated professionals who possess an in-depth understanding of the local market dynamics, trends, and regulations. With our expertise and personalized approach, we aim to make your plot sale experience smooth, efficient, and rewarding.
+                At <span className="font-semibold text-blue-600">the big bull</span>, we understand that buying or selling a plot is a significant decision, both financially and emotionally. That's why we have assembled a team of dedicated professionals who possess an in-depth understanding of the local market dynamics, trends, and regulations. With our expertise and personalized approach, we aim to make your plot sale experience smooth, efficient, and rewarding.
               </p>
             </div>
           </div>
@@ -58,7 +59,7 @@ function Aboutus({setactiveState}) {
           <div className="flex justify-center items-center p-2 sm:p-4">
             <img
               src={home2} // Replace with your image path
-              alt="Dr Realtor"
+              alt="the big bull"
               className="rounded-lg shadow-lg object-cover"
               style={{ width: '100%', maxWidth: '500px', height: 'auto' }}
             />
@@ -80,20 +81,18 @@ function Aboutus({setactiveState}) {
 
         <h1 className="text-3xl font-bold text-center text-blue-700 mb-6">About Us</h1>
       <p className="text-gray-700 text-sm sm:text-md leading-relaxed space-y-3 sm:space-y-4">
-        Welcome to <strong>Dr Realtor</strong>, your premier destination for all your plot needs in Patna, Bihta, and the surrounding areas.
+        Welcome to <strong>The Big Bull</strong>, your premier destination for all your plot needs in Patna, Bihta, and the surrounding areas.
         As a trusted and experienced real estate marketing and sales team, we specialize in connecting buyers and sellers in the ever-growing real estate market.
       </p>
 
-      <h2 className="text-2xl font-semibold text-blue-700 mt-6">Location Of Dr Realtor Properties</h2>
+      <h2 className="text-2xl font-semibold text-blue-700 mt-6">Location Of the big bull Properties</h2>
       <p className="text-gray-700 text-sm sm:text-md leading-relaxed space-y-3 sm:space-y-4">
-        With a focus on Patna, Bihta, and nearby areas, we have developed an extensive network and comprehensive knowledge of the local real estate landscape.
-        We stay up-to-date with the latest developments, infrastructure projects, and investment opportunities in these regions.
-        Whether you are looking for residential, commercial, or agricultural plots, our team is well-equipped to assist you in finding the perfect property that aligns with your requirements and investment goals.
+         Office H.O dehradun 
       </p>
 
       <h2 className="text-2xl font-semibold text-blue-700 mt-6">Transparency</h2>
       <p className="text-gray-700 text-sm sm:text-md leading-relaxed space-y-3 sm:space-y-4">
-        At Dr Realtor, we believe in transparency, integrity, and professionalism. We prioritize open and honest communication with our clients,
+        At the big bull, we believe in transparency, integrity, and professionalism. We prioritize open and honest communication with our clients,
         ensuring that you are fully informed at every stage of the plot sale process. Our dedicated team will provide you with accurate and reliable information,
         assist in property valuation, guide you through legal procedures, and negotiate on your behalf, all with the utmost dedication and commitment.
       </p>
@@ -107,7 +106,7 @@ function Aboutus({setactiveState}) {
 
       <h2 className="text-2xl font-semibold text-blue-700 mt-6">Expert Team</h2>
       <p className="text-gray-700 text-sm sm:text-md leading-relaxed space-y-3 sm:space-y-4">
-        At Dr Realtor, we pride ourselves on offering personalized services that cater to your unique needs.
+        At the big bull, we pride ourselves on offering personalized services that cater to your unique needs.
         Our team takes the time to understand your specific requirements, preferences, and budget constraints.
         Whether you are a first-time buyer, an experienced investor, or a property owner looking to sell, we are here to provide expert guidance and support throughout the entire process.
       </p>
@@ -121,13 +120,13 @@ function Aboutus({setactiveState}) {
 
       <h2 className="text-2xl font-semibold text-blue-700 mt-6 sm:text-md leading-relaxed space-y-3 sm:space-y-4">Support</h2>
       <p className="text-gray-700 text-sm sm:text-md leading-relaxed space-y-3 sm:space-y-4">
-        Thank you for considering Dr Realtor for your plot needs. Contact us today to experience our exceptional services, personalized approach,
-        and expertise in Patna, Bihta, and the surrounding areas. Let us be your trusted partner in achieving your real estate goals and turning your plot ownership dreams into reality.
+        Thank you for considering the big bull for your plot needs. Contact us today to experience our exceptional services, personalized approach,
+        and expertise in Dehradun, and the surrounding areas. Let us be your trusted partner in achieving your real estate goals and turning your plot ownership dreams into reality.
       </p>
 
-      <h2 className="text-2xl font-semibold text-blue-700 mt-6  sm:text-md leading-relaxed space-y-3 sm:space-y-4">About Dr Realtor</h2>
+      <h2 className="text-2xl font-semibold text-blue-700 mt-6  sm:text-md leading-relaxed space-y-3 sm:space-y-4">About the big bull</h2>
       <p className="text-gray-700 text-sm sm:text-md leading-relaxed space-y-3 sm:space-y-4">
-        At Dr Realtor, our services ensure that every transaction is smooth, transparent, and efficient. Our team remains committed to providing the best opportunities
+        At the big bull, our services ensure that every transaction is smooth, transparent, and efficient. Our team remains committed to providing the best opportunities
         for buyers and sellers, leveraging our extensive experience and market knowledge to deliver top-notch real estate solutions.
       </p>
 

@@ -113,16 +113,16 @@ const MatchingIncomeReport = () => {
         const data = filteredData.map(item => [
           item.sn,
           item.period,
-          `$${item.bflb.toLocaleString()}`,
-          `$${item.bfrb.toLocaleString()}`,
-          `$${item.nlb.toLocaleString()}`,
-          `$${item.nrb.toLocaleString()}`,
-          `$${item.tlb.toLocaleString()}`,
-          `$${item.trb.toLocaleString()}`,
-          `$${item.clb.toLocaleString()}`,
-          `$${item.crb.toLocaleString()}`,
-          `$${item.matchingBusiness.toLocaleString()}`,
-          `$${item.matchingIncome.toLocaleString()}`
+          `₹₹{item.bflb.toLocaleString()}`,
+          `₹₹{item.bfrb.toLocaleString()}`,
+          `₹₹{item.nlb.toLocaleString()}`,
+          `₹₹{item.nrb.toLocaleString()}`,
+          `₹₹{item.tlb.toLocaleString()}`,
+          `₹₹{item.trb.toLocaleString()}`,
+          `₹₹{item.clb.toLocaleString()}`,
+          `₹₹{item.crb.toLocaleString()}`,
+          `₹₹{item.matchingBusiness.toLocaleString()}`,
+          `₹₹{item.matchingIncome.toLocaleString()}`
         ]);
         
         // Add table using autoTable
@@ -154,16 +154,16 @@ const MatchingIncomeReport = () => {
     const data = filteredData.map(item => [
       item.sn,
       item.period,
-      `$${item.bflb.toLocaleString()}`,
-      `$${item.bfrb.toLocaleString()}`,
-      `$${item.nlb.toLocaleString()}`,
-      `$${item.nrb.toLocaleString()}`,
-      `$${item.tlb.toLocaleString()}`,
-      `$${item.trb.toLocaleString()}`,
-      `$${item.clb.toLocaleString()}`,
-      `$${item.crb.toLocaleString()}`,
-      `$${item.matchingBusiness.toLocaleString()}`,
-      `$${item.matchingIncome.toLocaleString()}`
+      `₹₹{item.bflb.toLocaleString()}`,
+      `₹₹{item.bfrb.toLocaleString()}`,
+      `₹₹{item.nlb.toLocaleString()}`,
+      `₹₹{item.nrb.toLocaleString()}`,
+      `₹₹{item.tlb.toLocaleString()}`,
+      `₹₹{item.trb.toLocaleString()}`,
+      `₹₹{item.clb.toLocaleString()}`,
+      `₹₹{item.crb.toLocaleString()}`,
+      `₹₹{item.matchingBusiness.toLocaleString()}`,
+      `₹₹{item.matchingIncome.toLocaleString()}`
     ]);
     
     const worksheet = XLSX.utils.aoa_to_sheet([headers, ...data]);
@@ -324,17 +324,17 @@ const MatchingIncomeReport = () => {
                   <TableRow key={row.sn}>
                     <TableCell>{row.sn}</TableCell>
                     <TableCell>{row.period}</TableCell>
-                    <TableCell>${row.bflb.toLocaleString()}</TableCell>
-                    <TableCell>${row.bfrb.toLocaleString()}</TableCell>
-                    <TableCell>${row.nlb.toLocaleString()}</TableCell>
-                    <TableCell>${row.nrb.toLocaleString()}</TableCell>
-                    <TableCell>${row.tlb.toLocaleString()}</TableCell>
-                    <TableCell>${row.trb.toLocaleString()}</TableCell>
-                    <TableCell>${row.clb.toLocaleString()}</TableCell>
-                    <TableCell>${row.crb.toLocaleString()}</TableCell>
-                    <TableCell>${row.matchingBusiness.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.bflb.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.bfrb.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.nlb.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.nrb.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.tlb.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.trb.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.clb.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.crb.toLocaleString()}</TableCell>
+                    <TableCell>₹{row.matchingBusiness.toLocaleString()}</TableCell>
                     <TableCell sx={{ fontWeight: 'bold', color: theme.palette.success.main }}>
-                      ${row.matchingIncome.toLocaleString()}
+                      ₹{row.matchingIncome.toLocaleString()}
                     </TableCell>
                   </TableRow>
                 ))}
@@ -343,10 +343,10 @@ const MatchingIncomeReport = () => {
                     Total
                   </TableCell>
                   <TableCell sx={{ fontWeight: 'bold' }}>
-                    ${filteredData.reduce((sum, item) => sum + item.matchingBusiness, 0).toLocaleString()}
+                    ₹{filteredData.reduce((sum, item) => sum + item.matchingBusiness, 0).toLocaleString()}
                   </TableCell>
                   <TableCell sx={{ fontWeight: 'bold', color: theme.palette.success.main }}>
-                    ${filteredData.reduce((sum, item) => sum + item.matchingIncome, 0).toLocaleString()}
+                    ₹{filteredData.reduce((sum, item) => sum + item.matchingIncome, 0).toLocaleString()}
                   </TableCell>
                 </TableRow>
               </TableBody>

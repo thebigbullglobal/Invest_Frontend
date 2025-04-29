@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth, db } from './../Firebase/firebase.config';
-import { doc, setDoc } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const CreateAdmin = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    parent_username: '',
+    username: '',
     password: '',
-    confirmPassword: '',
-    username: ''
   });
-  const [error, setError] = useState('');
+
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Generate random username on component mount
   useEffect(() => {
     generateUsername();
   }, []);
@@ -34,35 +31,19 @@ const CreateAdmin = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setError('');
     setLoading(true);
 
-    if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
-      setLoading(false);
-      return;
-    }
-
     try {
-      // Create user in Firebase Auth
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        formData.email,
-        formData.password
-      );
-
-      // Save additional user data in Firestore
-      await setDoc(doc(db, 'users', userCredential.user.uid), {
-        name: formData.name,
-        email: formData.email,
+      const response = await axios.post('https://invest-backend-1.onrender.com/users/createtree/v2', {
+        parent_username: formData.parent_username,
         username: formData.username,
-        role: 'admin',
-        createdAt: new Date()
+        password: formData.password,
       });
 
-      navigate('/dashboard');
+      toast.success('Admin account created successfully!');
+      // navigate('/dashboard'); // if needed
     } catch (err) {
-      setError(err.message);
+      toast.error(err.response?.data?.message || 'Something went wrong!');
     } finally {
       setLoading(false);
     }
@@ -70,109 +51,65 @@ const CreateAdmin = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center p-4">
-      <motion.div 
+      <ToastContainer position="top-right" autoClose={3000} hideProgressBar newestOnTop />
+      
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="w-full max-w-md bg-white rounded-xl shadow-2xl overflow-hidden"
       >
-        <div className="bg-indigo-600 py-6 px-8 text-center">
-          <h2 className="text-3xl font-bold text-white">Create Admin Account</h2>
-          <p className="text-indigo-100 mt-2">Setup a new administrator profile</p>
+        <div className="bg-indigo-700 py-6 px-8 text-center">
+          <h1 className="text-2xl font-bold text-white mb-1">The Big Bull Pvt Ltd</h1>
+          <h2 className="text-xl font-semibold text-indigo-100">Admin User Registration</h2>
         </div>
 
         <form onSubmit={handleSubmit} className="p-8 space-y-6">
-          {error && (
-            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-              {error}
-            </div>
-          )}
-
           <div>
-            <label className="block text-gray-700 text-sm font-medium mb-1">
-              Full Name
-            </label>
+            <label className="block text-gray-700 text-sm font-medium mb-1">Parent Username</label>
             <input
               type="text"
-              name="name"
-              value={formData.name}
+              name="parent_username"
+              value={formData.parent_username}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
-              placeholder="John Doe"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
+              placeholder="Enter Parent ID"
             />
           </div>
 
           <div>
-            <label className="block text-gray-700 text-sm font-medium mb-1">
-              Email Address
-            </label>
+            <label className="block text-gray-700 text-sm font-medium mb-1">Username</label>
+            <div className="flex items-center">
+              <input
+                type="text"
+                name="username"
+                value={formData.username}
+                readOnly
+                className="w-full px-4 py-2 border border-gray-300 rounded-l-lg bg-gray-50 font-mono"
+              />
+              <button
+                type="button"
+                onClick={generateUsername}
+                className="px-3 py-2 bg-gray-200 hover:bg-gray-300 border border-gray-300 rounded-r-lg"
+              >
+                ↻
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-gray-700 text-sm font-medium mb-1">Password</label>
             <input
-              type="email"
-              name="email"
-              value={formData.email}
+              type="password"
+              name="password"
+              value={formData.password}
               onChange={handleChange}
               required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
-              placeholder="john@example.com"
+              minLength="6"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500"
+              placeholder="••••••••"
             />
-          </div>
-
-          <div className="flex items-center space-x-4">
-            <div className="flex-1">
-              <label className="block text-gray-700 text-sm font-medium mb-1">
-                Username
-              </label>
-              <div className="flex items-center">
-                <input
-                  type="text"
-                  name="username"
-                  value={formData.username}
-                  readOnly
-                  className="w-full px-4 py-2 border border-gray-300 rounded-l-lg bg-gray-50 font-mono"
-                />
-                <button
-                  type="button"
-                  onClick={generateUsername}
-                  className="px-3 py-2 bg-gray-200 hover:bg-gray-300 border border-gray-300 rounded-r-lg transition"
-                >
-                  ↻
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-gray-700 text-sm font-medium mb-1">
-                Password
-              </label>
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-                minLength="6"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
-                placeholder="••••••••"
-              />
-            </div>
-            <div>
-              <label className="block text-gray-700 text-sm font-medium mb-1">
-                Confirm Password
-              </label>
-              <input
-                type="password"
-                name="confirmPassword"
-                value={formData.confirmPassword}
-                onChange={handleChange}
-                required
-                minLength="6"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition"
-                placeholder="••••••••"
-              />
-            </div>
           </div>
 
           <div className="pt-4">
@@ -197,8 +134,8 @@ const CreateAdmin = () => {
         <div className="px-8 py-4 bg-gray-50 text-center border-t border-gray-200">
           <p className="text-gray-600 text-sm">
             Already have an account?{' '}
-            <button 
-              onClick={() => navigate('/login')} 
+            <button
+              onClick={() => navigate('/')}
               className="text-indigo-600 hover:text-indigo-800 font-medium"
             >
               Sign in
@@ -210,4 +147,6 @@ const CreateAdmin = () => {
   );
 };
 
+
+//update code of create admin page
 export default CreateAdmin;

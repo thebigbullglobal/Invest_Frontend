@@ -358,7 +358,7 @@ const MessageInbox = () => {
                 sx={{
                   '&:hover': { backgroundColor: theme.palette.action.hover },
                   backgroundColor: message.status === 'unread' ? theme.palette.action.selected : 'inherit',
-                  borderLeft: message.labels?.includes('important') ? `4px solid ${theme.palette.error.main}` : 'none'
+                  borderLeft: message.labels?.includes('important') ? `4px solid ₹{theme.palette.error.main}` : 'none'
                 }}
               >
                 <Box sx={{ display: 'flex', alignItems: 'center', width: '100%' }}>

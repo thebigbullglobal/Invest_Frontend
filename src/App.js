@@ -53,8 +53,8 @@ function LayoutWrapper({ isAuthenticated, setIsAuthenticated, logout }) {
       {!hideHeaderFooter && <Header  setIsAuthenticated = {setIsAuthenticated} />}
       
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/new_account" element={<CreateAdmin />} />
+        {/* <Route path="/" element={<Home />} /> */}
+        <Route path="/new_account1231" element={<CreateAdmin />} />
         <Route
           path="/dashboard"
           element={
@@ -63,20 +63,14 @@ function LayoutWrapper({ isAuthenticated, setIsAuthenticated, logout }) {
             </ProtectedRoute>
           }
         />
-        <Route
-          path="/create-parent"
-          element={
-            <ProtectedRoute isAuthenticated={isAuthenticated}>
-              <CreateParent />
-            </ProtectedRoute>
-          }
-        />
-
+       
+        
+    
       
         <Route
-          path="*"
+          path="/"
           element={
-            <Navigate to={isAuthenticated ? "/dashboard" : "/"} />
+            <Navigate to={isAuthenticated ? "/" : "/"} />
           }
         />
       </Routes>

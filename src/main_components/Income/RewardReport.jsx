@@ -143,11 +143,11 @@ const RewardReport = () => {
     
     const data = filteredData.map(item => [
       item.sr,
-      `₹${item.matchingBusiness.toLocaleString()}`,
+      `₹₹{item.matchingBusiness.toLocaleString()}`,
       item.designation,
       item.reward,
-      `₹${item.requiredLeft.toLocaleString()}`,
-      `₹${item.requiredRight.toLocaleString()}`,
+      `₹₹{item.requiredLeft.toLocaleString()}`,
+      `₹₹{item.requiredRight.toLocaleString()}`,
       item.status,
       item.achievedDate || 'N/A'
     ]);

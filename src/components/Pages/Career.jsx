@@ -82,7 +82,7 @@ function Career(){
           <h1 className=' text-sm   md:text-2xl'><span className='text-orange-400 font-bold'>Career</span></h1>
     
           <div className=' py-5 bg-gray-100 px-3 text-sm md:text-md rounded-md [word-spacing:5px]'>
-                 <p>Dr Realtor is an exciting organization that attracts bright and dedicated talent, all focused on delivering to our members the best experience we can. We foster an environment of empowerment and seek people who want to make an impact, both individually and as part of our team.
+                 <p>the big bull is an exciting organization that attracts bright and dedicated talent, all focused on delivering to our members the best experience we can. We foster an environment of empowerment and seek people who want to make an impact, both individually and as part of our team.
 
 We value hiring people with unique backgrounds to support our culture of innovation and ideas.</p>
 
