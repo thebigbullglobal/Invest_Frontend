@@ -45,9 +45,10 @@ function Aboutus({setactiveState}) {
             </h1>
 
             <div className="text-gray-700 text-sm sm:text-md leading-relaxed space-y-3 sm:space-y-4">
-              <p>
-                Welcome to <span className="font-semibold text-blue-600">Dr Realtor</span>, your premier destination for all your plot needs in Patna, Bihta, and the surrounding areas. As a trusted and experienced real estate marketing and sales team, we specialize in connecting buyers and sellers in the ever-growing real estate market.
-              </p>
+            <p>
+  Welcome to <span className="font-semibold text-blue-600">The Big Bull</span>, located in Uttarakhand and its surrounding areas. As a trusted and experienced real estate marketing and sales team, we specialize in connecting buyers and sellers in the ever-growing real estate market.
+</p>
+
               <p>
                 At <span className="font-semibold text-blue-600">Dr Realtor</span>, we understand that buying or selling a plot is a significant decision, both financially and emotionally. That's why we have assembled a team of dedicated professionals who possess an in-depth understanding of the local market dynamics, trends, and regulations. With our expertise and personalized approach, we aim to make your plot sale experience smooth, efficient, and rewarding.
               </p>
